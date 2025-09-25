@@ -11,6 +11,7 @@ npm install
 # Install Tailwind CSS
 
 npm install tailwindcss @tailwindcss/vite
+npm install -D tailwindcss postcss autoprefixer
 
 # Configure the Vite plugin
 
@@ -58,6 +59,26 @@ font-weight: 300;
 body {
 font-family: "Netflix Sans";
 }
+
+# Create file config tailwind
+
+tailwind.config.js
+
+/** @type {import('tailwindcss').Config} \*/
+export default {
+content: [
+"./src/**/\*.{js,jsx,ts,tsx}",
+"./public/index.html"
+],
+theme: {
+extend: {
+fontSize: {
+10: "#10px",
+},
+},
+},
+plugins: [],
+};
 
 # config font awesome
 

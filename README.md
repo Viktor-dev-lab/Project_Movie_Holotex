@@ -63,3 +63,44 @@ npm i --save @fortawesome/react-fontawesome@latest
 npm i --save @fortawesome/free-solid-svg-icons
 npm i --save @fortawesome/free-regular-svg-icons
 npm i --save @fortawesome/free-brands-svg-icons
+
+
+# Config prettier
+🔹 1. Install Prettier (if not installed yet)
+npm install --save-dev prettier
+
+
+or with yarn:
+
+yarn add -D prettier
+
+🔹 2. Install the Tailwind Prettier plugin
+npm install --save-dev prettier-plugin-tailwindcss
+
+
+or with yarn:
+
+yarn add -D prettier-plugin-tailwindcss
+
+🔹 3. Create/Edit Prettier config
+
+Make a .prettierrc (or prettier.config.js) file in the root of your project.
+
+Example (.prettierrc):
+
+{
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
+
+🔹 4. (Optional) Add script to package.json
+
+Inside package.json, add:
+
+"scripts": {
+  "format": "prettier --write ."
+}
+
+
+Then you can run:
+
+npm run format
